@@ -1,3 +1,6 @@
+## Live Demo:
+https://louispetrik.github.io/react-responsive-app/
+
 ## Getting started
 
 Download the repo or clone it with git:
