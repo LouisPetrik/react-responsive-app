@@ -9,6 +9,7 @@ const Wrapper = styled.div`
     top: 0;
     right: 0;
     width: 100%;
+    display: block;
 `
 
 const CustomNavbar = styled.ul`
@@ -27,6 +28,7 @@ const CustomLink = styled.a`
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1.2em;
+    font-family: "Roboto";
 `
 
 const DropdownIcon = styled.div`

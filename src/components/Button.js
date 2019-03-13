@@ -6,7 +6,7 @@ const CustomButton = styled.button`
     color: orange;
     padding: 0.5em 2em;
     border-radius: 0.5em;
-    font-size: 14px;
+    font-size: 1em;
     &:hover {
         background-color: lightblue;
     }
@@ -14,10 +14,10 @@ const CustomButton = styled.button`
 
 
 class Button extends React.Component {
-    render() {
+    render(props) {
         return (
             <CustomButton>
-                Hallo
+                {this.props.title}
             </CustomButton>
         )
     }
