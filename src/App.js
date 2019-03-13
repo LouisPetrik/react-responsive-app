@@ -7,7 +7,11 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Heading from "./components/Heading"
 import Modal from "./components/Modal"
+import CookiePopup from "./components/CookiePopup"
 
+const Placeholder = styled.div`
+  height: 50px;
+`
 
 class App extends Component {
   state = {
@@ -26,7 +30,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar/>
-      
+
         <Row>
           <Col span={10} offset={1}>
             <Heading title="This is the title"/>
@@ -47,6 +51,7 @@ class App extends Component {
           </Col>
     
         </Row>
+        <CookiePopup/>
         <Footer/>
       </React.Fragment>
     );

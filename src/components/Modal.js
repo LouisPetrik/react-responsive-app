@@ -1,21 +1,22 @@
 import React from "react"
 import styled from "styled-components"
 import Button from "./Button"
-// modal
-const Wrapper = styled.div`
-  display: block; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+
+
+const ModalWrapper = styled.div`
+  display: block; 
+  position: fixed; 
+  z-index: 2; 
+  padding-top: 100px; 
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
 `
-// modal content
+
 const ModalMain = styled.div`
     position: relative;
     background-color: #fefefe;
@@ -36,7 +37,7 @@ const ModalMain = styled.div`
     font-family: Roboto;
   
 `
-// modal-header
+
 const ModalHeader = styled.div`
     padding: 2px 10px;
     height: 60px;
@@ -45,11 +46,11 @@ const ModalHeader = styled.div`
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 `
-// modal-body
+
 const ModalBody = styled.div`
     padding: 2px 16px;
 `
-// modal-footer
+
 const ModalFooter = styled.div`
     padding: 8px 10px;
     background-color: black;
@@ -85,7 +86,7 @@ class Modal extends React.Component {
         return (
             <React.Fragment>
             { this.props.show ? 
-            <Wrapper>
+            <ModalWrapper>
                 <ModalMain>
                     <ModalHeader>
                         <CloseButton onClick={this.props.function}>&times;</CloseButton>
@@ -100,7 +101,7 @@ class Modal extends React.Component {
                         <ModalButton>No</ModalButton>
                     </ModalFooter>
                 </ModalMain>
-            </Wrapper>
+            </ModalWrapper>
             : null
             }
             </React.Fragment>

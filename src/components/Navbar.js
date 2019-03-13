@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     top: 0;
     right: 0;
     width: 100%;
-    display: block;
+    z-index: 1;
 `
 
 const CustomNavbar = styled.ul`
@@ -29,6 +29,9 @@ const CustomLink = styled.a`
     text-decoration: none;
     font-size: 1.2em;
     font-family: "Roboto";
+    :hover {
+        color: lightgrey;
+    }
 `
 
 const DropdownIcon = styled.div`
@@ -77,7 +80,6 @@ class Navbar extends React.Component {
     render() {
         return (
             <Wrapper>
-
                 <Media query="(max-width: 599px)">
                     {matches =>
                         matches ? (
@@ -89,8 +91,8 @@ class Navbar extends React.Component {
                         </CustomNavbar>
                         { this.state.showDropdownMenu ? 
                             <DropdownMenu>
-                              <DropdownLink>hallo</DropdownLink>
-                              <DropdownLink>hallo</DropdownLink>
+                              <DropdownLink href="/about">hallo</DropdownLink>
+                              <DropdownLink href="/contact">hallo</DropdownLink>
                             </DropdownMenu>
                             :null
                         }

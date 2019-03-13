@@ -10,11 +10,13 @@ const CustomFooter = styled.footer`
     background-color: #efefef;
     text-align: center;
 `
+
 const FooterLink = styled.a`
-    display: block;
+    display: inline-block;
     text-align: center;
     font-size: 1.2em;
 `
+
 const Footer = () => {
     return (
         <CustomFooter>

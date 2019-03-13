@@ -7,8 +7,9 @@ const CustomButton = styled.button`
     padding: 0.5em 2em;
     border-radius: 0.5em;
     font-size: 1em;
+    background-color: white;
     &:hover {
-        background-color: lightblue;
+        background-color: lightgrey;
     }
 `
 
