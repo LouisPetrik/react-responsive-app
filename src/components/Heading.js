@@ -3,10 +3,11 @@ import styled from "styled-components"
 
 const CustomHeading = styled.h1`
     font-family: Roboto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     margin-top: 100px;
     font-size: 36px;
     font-weight: 500;
+    white-space: nowrap;
 `
 const Underline = styled.div`
     border-bottom: 1px solid #eee;

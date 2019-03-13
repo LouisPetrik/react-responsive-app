@@ -16,7 +16,7 @@ const CustomButton = styled.button`
 class Button extends React.Component {
     render(props) {
         return (
-            <CustomButton>
+            <CustomButton onClick={this.props.function}>
                 {this.props.title}
             </CustomButton>
         )
