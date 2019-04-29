@@ -8,6 +8,7 @@ import Footer from "./components/Footer"
 import Heading from "./components/Heading"
 import Modal from "./components/Modal"
 import CookiePopup from "./components/CookiePopup"
+import Input from "./components/Input"
 
 const Placeholder = styled.div`
   height: 50px;
@@ -15,7 +16,8 @@ const Placeholder = styled.div`
 
 class App extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    showCookiePopup: true
   }
 
   handleModal = () => {
@@ -23,8 +25,15 @@ class App extends Component {
       return {
         showModal: !prevState.showModal
       }
-    }, console.log(this.state.showModal))
-    
+    })
+  } 
+
+  handleCookiePopup = () => {
+    this.setState(prevState => { 
+      return {
+        showCookiePopup: !prevState.showCookiePopup
+      }
+    })
   } 
   render() {
     return (
@@ -48,10 +57,17 @@ class App extends Component {
             show={this.state.showModal}
             function={this.handleModal}
           />
+
           </Col>
     
         </Row>
-        <CookiePopup/>
+        <CookiePopup
+          show={this.state.showCookiePopup}
+          function={this.handleCookiePopup}
+        />
+
+        <Input />
+        
         <Footer/>
       </React.Fragment>
     );
